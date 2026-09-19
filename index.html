@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Caso de Augusto</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="jogo">
+
+    <!-- CAPA -->
+    <section id="inicio" class="tela ativa">
+
+        <div class="capa">
+
+            <span class="pequeno">ARQUIVO CONFIDENCIAL</span>
+
+            <h1>
+                O CASO<br>
+                <span>DE AUGUSTO</span>
+            </h1>
+
+            <p class="frase">
+                Uma noite. Cinco suspeitos. Uma verdade escondida.
+            </p>
+
+            <button id="btnIniciar">
+                INICIAR INVESTIGAÇÃO
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTÓRIA -->
+    <section id="historia" class="tela">
+
+        <div class="painel">
+
+            <span class="etapa">ETAPA 01</span>
+
+            <h2>O que aconteceu?</h2>
+
+            <p>
+                Era uma noite de sexta-feira. Augusto Montenegro
+                havia convidado cinco pessoas para jantar em sua casa.
+            </p>
+
+            <p>
+                Por volta das 22h, Augusto recebeu uma ligação.
+                Depois de desligar, voltou para a sala visivelmente
+                preocupado.
+            </p>
+
+            <blockquote>
+                "Acho que alguém aqui não veio para jantar."
+            </blockquote>
+
+            <p>
+                Pouco depois, chamou sua secretária, Clara,
+                para conversar em particular no escritório.
+            </p>
+
+            <p>
+                Às 22h17, houve uma queda de energia.
+                Quando as luzes voltaram, Augusto estava morto
+                no escritório.
+            </p>
+
+            <p>
+                A porta estava aberta e não havia ninguém dentro.
+                Todos afirmaram que não estavam perto do local.
+            </p>
+
+            <button id="btnIrPistas" class="botao-principal">
+                INVESTIGAR O LOCAL
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PISTAS -->
+    <section id="pistas" class="tela">
+
+        <div class="painel">
+
+            <span class="etapa">ETAPA 02</span>
+
+            <h2>Pistas encontradas</h2>
+
+            <p>
+                Antes de interrogar os suspeitos, você examina
+                o escritório e encontra algumas informações.
+            </p>
+
+            <div class="pista-box">
+
+                <div class="icone-pista">01</div>
+
+                <div>
+                    <strong>Bloco de notas</strong>
+
+                    <p>
+                        A última anotação de Augusto dizia:
+                        "Conversar com C."
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pista-box">
+
+                <div class="icone-pista">02</div>
+
+                <div>
+                    <strong>Duas xícaras</strong>
+
+                    <p>
+                        Havia duas xícaras de café sobre a mesa.
+                        Uma delas estava quase cheia.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pista-box">
+
+                <div class="icone-pista">03</div>
+
+                <div>
+                    <strong>Chave do escritório</strong>
+
+                    <p>
+                        Uma chave do escritório foi encontrada
+                        no corredor.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pista-box">
+
+                <div class="icone-pista">04</div>
+
+                <div>
+                    <strong>Câmera do corredor</strong>
+
+                    <p>
+                        A câmera registrou alguém entrando no
+                        corredor às 22h03. O rosto não aparece.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pista-box">
+
+                <div class="icone-pista">05</div>
+
+                <div>
+                    <strong>Celular de Augusto</strong>
+
+                    <p>
+                        A última ligação recebida aconteceu às
+                        21h56, de um número desconhecido.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button id="btnIrInterrogatorio" class="botao-principal">
+                INTERROGAR SUSPEITOS
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERROGATÓRIO -->
+    <section id="interrogatorio" class="tela">
+
+        <div class="painel">
+
+            <span class="etapa">ETAPA 03</span>
+
+            <h2>Interrogatório</h2>
+
+            <p>
+                Interrogue todos os suspeitos e compare suas
+                respostas com as pistas encontradas.
+            </p>
+
+
+            <div class="suspeitos">
+
+                <button class="suspeito" id="suspeitoHelena">
+
+                    <div class="rosto">H</div>
+
+                    <strong>Helena</strong>
+
+                    <small>Irmã de Augusto</small>
+
+                </button>
+
+
+                <button class="suspeito" id="suspeitoRafael">
+
+                    <div class="rosto">R</div>
+
+                    <strong>Rafael</strong>
+
+                    <small>Sócio de Augusto</small>
+
+                </button>
+
+
+                <button class="suspeito" id="suspeitoClara">
+
+                    <div class="rosto">C</div>
+
+                    <strong>Clara</strong>
+
+                    <small>Secretária de Augusto</small>
+
+                </button>
+
+
+                <button class="suspeito" id="suspeitoDaniel">
+
+                    <div class="rosto">D</div>
+
+                    <strong>Daniel</strong>
+
+                    <small>Amigo de Augusto</small>
+
+                </button>
+
+
+                <button class="suspeito" id="suspeitoBeatriz">
+
+                    <div class="rosto">B</div>
+
+                    <strong>Beatriz</strong>
+
+                    <small>Governanta da casa</small>
+
+                </button>
+
+            </div>
+
+
+            <div id="caixaDepoimento" class="caixa-depoimento escondido">
+
+                <div class="cabecalho-personagem">
+
+                    <div id="avatar" class="avatar">H</div>
+
+                    <div>
+                        <strong id="nomeSuspeito">Helena</strong>
+                        <small id="relacaoSuspeito">
+                            Irmã de Augusto
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <p id="falaPrincipal" class="fala"></p>
+
+
+                <strong>FAÇA UMA PERGUNTA</strong>
+
+                <div id="perguntas" class="perguntas"></div>
+
+                <div id="resposta" class="resposta escondido"></div>
+
+            </div>
+
+
+            <p id="avisoInterrogatorio" class="aviso escondido">
+                Interrogue todos os suspeitos antes de continuar.
+            </p>
+
+
+            <button
+                id="btnIrAnalise"
+                class="botao-principal"
+                disabled
+            >
+                ANALISAR O CASO
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANÁLISE -->
+    <section id="analise" class="tela">
+
+        <div class="painel">
+
+            <span class="etapa">ETAPA 04</span>
+
+            <h2>Análise do caso</h2>
+
+            <p>
+                Você já encontrou as pistas e interrogou
+                todos os suspeitos.
+            </p>
+
+            <div class="pista-box">
+
+                <div class="icone-pista">01</div>
+
+                <div>
+                    <strong>A anotação</strong>
+
+                    <p>
+                        "Conversar com C." confirma que Augusto
+                        tinha um encontro marcado com Clara.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pista-box">
+
+                <div class="icone-pista">02</div>
+
+                <div>
+                    <strong>O horário</strong>
+
+                    <p>
+                        A câmera mostra alguém entrando no
+                        corredor às 22h03.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pista-box">
+
+                <div class="icone-pista">03</div>
+
+                <div>
+                    <strong>A chave</strong>
+
+                    <p>
+                        Uma chave do escritório foi encontrada
+                        no corredor.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pista-box">
+
+                <div class="icone-pista">04</div>
+
+                <div>
+                    <strong>As versões</strong>
+
+                    <p>
+                        Alguns suspeitos esconderam informações,
+                        mas apenas uma versão entra em conflito
+                        diretamente com as pistas.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button id="btnIrAcusacao" class="botao-principal">
+                FAZER ACUSAÇÃO
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACUSAÇÃO -->
+    <section id="acusacao" class="tela">
+
+        <div class="painel">
+
+            <span class="etapa">ETAPA 05</span>
+
+            <h2>Faça sua acusação</h2>
+
+            <p>
+                Você só terá uma oportunidade.
+                Escolha cuidadosamente.
+            </p>
+
+
+            <div class="acusados">
+
+                <button class="acusado" id="acusHelena">
+                    <span>H</span>
+                    <strong>Helena</strong>
+                    <small>Irmã</small>
+                </button>
+
+                <button class="acusado" id="acusRafael">
+                    <span>R</span>
+                    <strong>Rafael</strong>
+                    <small>Sócio</small>
+                </button>
+
+                <button class="acusado" id="acusClara">
+                    <span>C</span>
+                    <strong>Clara</strong>
+                    <small>Secretária</small>
+                </button>
+
+                <button class="acusado" id="acusDaniel">
+                    <span>D</span>
+                    <strong>Daniel</strong>
+                    <small>Amigo</small>
+                </button>
+
+                <button class="acusado" id="acusBeatriz">
+                    <span>B</span>
+                    <strong>Beatriz</strong>
+                    <small>Governanta</small>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTADO -->
+    <section id="resultado" class="tela">
+
+        <div id="finalCard" class="final-card">
+
+            <div id="finalIcone" class="final-icone"></div>
+
+            <h2 id="finalTitulo"></h2>
+
+            <p id="finalTexto"></p>
+
+            <div id="explicacao" class="explicacao"></div>
+
+            <button id="btnRecomecar" class="botao-principal">
+                VOLTAR AO INÍCIO
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #263044 0%, #0b0d13 45%, #050609 100%);
+    color: #eee;
+    font-family: "Inter", sans-serif;
+}
+
+button,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.jogo {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
+}
+
+/* TELAS */
+
+.tela {
+    display: none;
+    min-height: 100vh;
+    padding: 45px 25px;
+}
+
+.tela.ativa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* CAPA */
+
+.capa {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(5, 7, 12, .45), rgba(5, 7, 12, .92)),
+        radial-gradient(circle, #29354b, #080a0f 70%);
+
+    border: 1px solid #303746;
+    border-radius: 18px;
+    padding: 40px;
+}
+
+.pequeno,
+.etapa {
+    color: #b7a17a;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.capa h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(48px, 9vw, 92px);
+    line-height: .95;
+    margin: 20px 0;
+    letter-spacing: 4px;
+}
+
+.capa h1 span {
+    color: #a51f28;
+}
+
+.frase {
+    color: #c9c9c9;
+    margin-bottom: 35px;
+}
+
+/* PAINÉIS */
+
+.painel {
+    width: min(700px, 100%);
+    margin: auto;
+    padding: 45px;
+    background: rgba(16, 19, 27, .95);
+    border: 1px solid #343a47;
+    border-radius: 15px;
+}
+
+h2 {
+    font-family: "Cinzel", serif;
+    font-size: 36px;
+    margin: 10px 0 25px;
+}
+
+.painel p {
+    line-height: 1.8;
+    color: #c9c9c9;
+    margin-bottom: 18px;
+}
+
+blockquote {
+    border-left: 3px solid #a51f28;
+    padding: 15px 20px;
+    margin: 25px 0;
+    color: #eee;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* BOTÕES */
+
+.botao-principal,
+#btnIniciar,
+#btnIrInterrogatorio {
+    border: none;
+    background: #a51f28;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+
+.botao-principal:hover,
+#btnIniciar:hover,
+#btnIrInterrogatorio:hover {
+    background: #c72b35;
+    transform: translateY(-2px);
+}
+
+.botao-principal:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+.botao-secundario {
+    margin-top: 20px;
+    background: transparent;
+    color: #aaa;
+    border: 1px solid #444;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+/* SUSPEITOS */
+
+.suspeitos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.suspeito {
+    background: #151923;
+    border: 1px solid #363b47;
+    color: white;
+    padding: 15px 8px;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.suspeito:hover {
+    border-color: #a51f28;
+    transform: translateY(-3px);
+}
+
+.rosto {
+    width: 75px;
+    height: 75px;
+    margin: auto auto 10px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    background: #252b38;
+}
+
+.suspeito strong,
+.suspeito small {
+    display: block;
+}
+
+.suspeito small {
+    color: #999;
+    margin-top: 4px;
+}
+
+/* DEPOIMENTO */
+
+.caixa-depoimento {
+    background: #11151e;
+    border: 1px solid #414754;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.cabecalho-personagem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #292f3b;
+    display: grid;
+    place-items: center;
+    font-size: 38px;
+}
+
+.fala {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+    margin: 20px 0;
+}
+
+.perguntas {
+    display: grid;
+    gap: 8px;
+}
+
+.pergunta {
+    text-align: left;
+    background: #1b202b;
+    color: #ddd;
+    border: 1px solid #353b47;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+.pergunta:hover {
+    border-color: #a51f28;
+}
+
+.resposta {
+    margin-top: 15px;
+    padding: 15px;
+    background: #1b202b;
+    border-left: 3px solid #a51f28;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* LOCAIS */
+
+.locais {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.local {
+    background: #151923;
+    color: white;
+    border: 1px solid #353b47;
+    padding: 25px 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.local:hover {
+    border-color: #a51f28;
+}
+
+.local span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.local strong,
+.local small {
+    display: block;
+}
+
+.local small {
+    color: #999;
+    margin-top: 5px;
+}
+
+.pista-box {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: #151923;
+    border: 1px solid #554832;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.icone-pista {
+    font-size: 30px;
+}
+
+/* ANÁLISE */
+
+.pergunta-analise {
+    margin: 20px 0;
+}
+
+.pergunta-analise label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+select {
+    width: 100%;
+    padding: 13px;
+    border-radius: 7px;
+    border: 1px solid #414754;
+    background: #151923;
+    color: white;
+    font-size: 15px;
+}
+
+/* ACUSAÇÃO */
+
+.acusados {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.acusado {
+    background: #151923;
+    color: white;
+    border: 1px solid #383e4b;
+    border-radius: 10px;
+    padding: 18px 8px;
+}
+
+.acusado:hover,
+.acusado.selecionado {
+    border-color: #a51f28;
+    background: #21171a;
+}
+
+.acusado span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.acusado strong,
+.acusado small {
+    display: block;
+}
+
+.acusado small {
+    color: #999;
+}
+
+/* FINAIS */
+
+.final-card {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 16px;
+    background: #11151e;
+    border: 1px solid #3a404d;
+}
+
+.final-card.vitoria {
+    border-color: #315d42;
+}
+
+.final-card.derrota {
+    border-color: #792b31;
+}
+
+.final-icone {
+    font-size: 60px;
+}
+
+.final-card h2 {
+    margin: 20px 0;
+}
+
+.final-card p {
+    line-height: 1.7;
+    color: #c9c9c9;
+}
+
+.explicacao {
+    margin-top: 25px;
+    padding: 20px;
+    background: #191e28;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.aviso {
+    color: #d66;
+    margin: 15px 0;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    .tela {
+        padding: 25px 15px;
+    }
+
+    .painel {
+        padding: 25px;
+    }
+
+    .capa {
+        padding: 25px;
+    }
+
+    .suspeitos,
+    .acusados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .locais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .suspeitos,
+    .acusados,
+    .locais {
+        grid-template-columns: 1fr;
+    }
+}
